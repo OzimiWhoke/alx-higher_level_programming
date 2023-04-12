@@ -1,3 +1,5 @@
 #!/usr/bin/node
-const myVar = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-console.log(myVar);
+const a = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+a.forEach(function(entry){
+	console.log(entry);
+});
