@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const a = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-a.forEach(function(entry) {
-  console.log(entry);
+const myA = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+myA.forEach(function(Entry) {
+	console.log(Entry);
 });
