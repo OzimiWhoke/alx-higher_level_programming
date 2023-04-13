@@ -1,3 +1,3 @@
 #!/usr/bin/node
-const mess = process.argv.length;
-console.log(mess == 2 ? 'No argument' : mess = 3 ? 'Argument found' : 'Arguments found');
+const count = process.argv.length;
+console.log(count == 2 ? 'No argument' : count = 3 ? 'Argument found' : 'Arguments found');
