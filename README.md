@@ -1,2 +1,2 @@
 # alx-higher_level_programming
-Python
+Introduction to Python, SQL and Javascript
