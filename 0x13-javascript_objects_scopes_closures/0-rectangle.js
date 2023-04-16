@@ -2,4 +2,6 @@
 /**
  * An empty class defining a rectangle
  */
-class Rectangle {}
+class Rectangle {
+
+}
