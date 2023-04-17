@@ -1,7 +1,9 @@
 #!/usr/bin/node
-const dict = {
-  1: ["Asterix", "Obelix"],
-  2: ["Tintin"],
-  3: ["Lucky Luke"],
+exports.dict = {
+  89: 1,
+  90: 2,
+  91: 1,
+  92: 3,
+  93: 1,
+  94: 2
 };
-module.exports = dict;
