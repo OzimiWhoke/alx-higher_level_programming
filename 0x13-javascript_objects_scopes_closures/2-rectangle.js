@@ -1,5 +1,5 @@
 #!/usr/bin/node
-module.exports = class Rectangle {
+class Rectangle {
   constructor(w, h) {
     if (w <= 0 || h <= 0) {
       // create empty object
@@ -9,3 +9,4 @@ module.exports = class Rectangle {
     }
   }
 }
+module.exports = Rectangle
