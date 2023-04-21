@@ -1,24 +1,21 @@
 #!/usr/bin/python3
-""" a script that lists all states from the database hbtn_0e_0_usa """
+""" 
+a script that lists all states from 
+the database hbtn_0e_0_usa 
+"""
+
 import MySQLdb
-import sys
+from sys import argv
 
-if len(sys.argv) != 4:
-    print("Usage: python list_states.py <username> <password> <database>")
-    sys.exit(1)
+if __name__ == '__main__':
+    conect = MySQLdb.connect(
+        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
 
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
+    cursor = db_connect.cursor()
 
-try:
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
-    rows = cur.fetchall()
-    for row in rows:
+    cursor.execute("SELECT * FROM states")
+
+    rows_selected = cursor.fetchall()
+
+    for row in rows_selected:
         print(row)
-    cur.close()
-    db.close()
-except MySQLdb.Error as e:
-    print("MySQL Error [%d]: %s" % (e.args[0], e.args[1]))
