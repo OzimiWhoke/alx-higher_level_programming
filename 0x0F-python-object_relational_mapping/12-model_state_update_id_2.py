@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
-Lists all State objects from the database hbtn_0e_6_usa
+a script that changes the name of a State object 
+from the database hbtn_0e_6_usa
 """
 
 import sys
@@ -15,5 +16,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State).order_by(State.id):
-        print(instance.id, instance.name, sep=": ")
+    new_instance = session.query(State).filter_by(id=2).first()
+    new_instance.name = 'New Mexico'
+    session.commit()
