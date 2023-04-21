@@ -8,16 +8,8 @@ hbtn_0e_0_usa
 import MySQLdb
 import sys
 
-if __name__ == '__main__':
-    connect = MySQLdb.connect(host="localhost", port=3306,
-                            user=argv[1], passwd=argv[2], db=argv[3])
-    cursor = connect.cursor()
-
-    cursor.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY 'N%' \
-                ORDER BY states.id ASC")
-
-    rows_selected = cursor.fetchall()
-
-    for row in rows_selected:
-        print(row)
+if __name__ == "__main__":
+    database = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    cursor = database.cursor()
+    cursor.execute("SELECT * FROM `states` ORDER BY `id`")
+    [print(state) for state in c.fetchall() if state[1][0] == "N"]
