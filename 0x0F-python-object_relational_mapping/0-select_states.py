@@ -8,14 +8,15 @@ import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-    conect = MySQLdb.connect(
+
+    database_connect = MySQLdb.connect(
         host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
 
-    cursor = db_connect.cursor()
+    database_cursor = database_connect.cursor()
 
-    cursor.execute("SELECT * FROM states")
+    database_cursor.execute("SELECT * FROM states")
 
-    rows_selected = cursor.fetchall()
+    rows_selected = database_cursor.fetchall()
 
     for row in rows_selected:
         print(row)
