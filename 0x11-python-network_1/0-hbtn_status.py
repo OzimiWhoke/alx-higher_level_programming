@@ -7,7 +7,7 @@ using package urllib
 import urllib.request
 
 with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
-    html = respomse.read()
+    html = response.read()
 
 print("Body response:")
 print("\t- type: {}".format(type(html)))
