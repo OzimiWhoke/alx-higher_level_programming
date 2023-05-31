@@ -30,3 +30,6 @@ JQuery Ajax
 JavaScript in the browser
 
 Dealing with data statically versus dynamically
+
+![1f1ihd](https://github.com/OzimiWhoke/alx-higher_level_programming/assets/113894292/ba7a7c01-2713-4f62-9518-a1e0f68ceda6)
+
